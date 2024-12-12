@@ -6,6 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Index from "./pages/Index";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import Testimonials from "./pages/Testimonials";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +45,10 @@ const App = () => (
           >
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/testimonials" element={<Testimonials />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </motion.div>
         </AnimatePresence>
